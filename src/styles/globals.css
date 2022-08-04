@@ -1,17 +1,13 @@
 @tailwind base;
-
-h1 {
-  @apply text-2xl;
-}
-h2 {
-  @apply text-xl;
-}
-h3 {
-  @apply text-lg;
-}
-a {
-  @apply text-blue-600;
-}
-
 @tailwind components;
 @tailwind utilities;
+
+*, body {
+  /* font-family: "Proxima Nova"; */
+  @apply tracking-tight;
+}
+
+#___gatsby {
+  height: 100vh;
+  background: url('../images/bg.svg') no-repeat;
+}

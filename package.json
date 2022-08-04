@@ -5,6 +5,7 @@
   "version": "0.3.0",
   "author": "Kostas Vrouvas <hello@kosvrouvas.com>",
   "dependencies": {
+    "@fontsource/inter": "^4.5.11",
     "autoprefixer": "^10.4.7",
     "gatsby": "^4.18.0",
     "gatsby-plugin-google-analytics": "^4.0.0",
@@ -15,6 +16,7 @@
     "gatsby-plugin-purgecss": "^6.1.2",
     "gatsby-plugin-react-helmet": "^5.18.0",
     "gatsby-plugin-sharp": "^4.18.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^4.18.0",
     "gatsby-transformer-sharp": "^4.18.0",
     "postcss": "^8.4.14",
