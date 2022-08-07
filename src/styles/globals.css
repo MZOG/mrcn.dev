@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 *, body {
-  /* font-family: "Proxima Nova"; */
   @apply tracking-tight;
 }
 
-#___gatsby {
+@media screen and (max-width: 992px) {
+  #___gatsby {
+    height: 100vh;
+    background: url('../images/bg.svg') no-repeat;
+    background-position: 0 0;
+    background-size: 600px;
+  }
+}
+
+/* #___gatsby {
   height: 100vh;
   background: url('../images/bg.svg') no-repeat;
-}
+} */

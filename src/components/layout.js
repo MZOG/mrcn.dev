@@ -3,7 +3,7 @@ import Header from "./header"
 
 const Layout = ({ children }) => {
   return (
-    <div className="wrapper">
+    <div className="wrapper dark:bg-gray-800">
       <Header />
       <main>{children}</main>
     </div>
