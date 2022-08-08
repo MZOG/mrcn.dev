@@ -6,41 +6,67 @@ const Navigation = () => {
   const handleNavOpen = () => {
     setIsNavOpened(!isNavOpened)
   }
+
+  const navItems = [
+    {
+      id: 1,
+      name: "Home",
+      href: "/",
+    },
+    {
+      id: 2,
+      name: "Offer",
+      href: "/offer",
+    },
+    {
+      id: 3,
+      name: "Works",
+      href: "/works",
+    },
+    {
+      id: 4,
+      name: "Blog",
+      href: "/blog",
+    },
+    {
+      id: 5,
+      name: "Get in touch",
+      href: "/contact",
+      button: true,
+    },
+  ]
+
   return (
     <>
       <nav
-        className={`${
+        className={`md:block ${
           isNavOpened
             ? "absolute left-0 top-0 bg-white w-full pt-20 pb-14"
             : "hidden"
         }`}
       >
-        <ul className="flex flex-col justify-between items-center">
-          <li className="p-3 block">
-            <Link className="block text-lg" to="/">
-              Home
-            </Link>
-          </li>
-          <li className="p-3 block">
-            <Link className="block text-lg" to="/">
-              Home
-            </Link>
-          </li>
-          <li className="p-3 block">
-            <Link className="block text-lg" to="/">
-              Home
-            </Link>
-          </li>
-          <li className="p-3 block">
-            <Link className="block text-lg" to="/">
-              Home
-            </Link>
-          </li>
+        <ul className="flex flex-col justify-between items-center md:flex-row md:gap-12">
+          {navItems.map(item => (
+            <li key={item.id}>
+              <Link
+                className={`p-3 block text-lg md:text-base ${
+                  item?.button
+                    ? "md:bg-teal-500 md:text-white md:rounded-xl md:shadow-xl md:hover:bg-teal-600"
+                    : ""
+                }`}
+                to={item.href}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <svg
         onClick={handleNavOpen}
-        className={`w-8 h-8 z-10 ${isNavOpened ? "hidden" : ""}`}
+        className={`md:hidden w-8 h-8 z-10 cursor-pointer ${
+          isNavOpened ? "hidden" : ""
+        }`}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -55,7 +81,9 @@ const Navigation = () => {
       </svg>
       <svg
         onClick={handleNavOpen}
-        className={`w-8 h-8 z-10 ${isNavOpened ? "" : "hidden"}`}
+        className={`md:hidden w-8 h-8 z-10 cursor-pointer ${
+          isNavOpened ? "" : "hidden"
+        }`}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

@@ -9,7 +9,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      <Container customClass="flex flex-col gap-10 lg:gap-20 lg:my-20">
+      <Container customClass="flex flex-col md:flex-row md:items-center gap-10 lg:gap-20 lg:my-20">
         <div className="lg:w-9/12">
           <span className="bg-white rounded-lg px-4 py-2 inline-block shadow-lg">
             Freelance <span className="font-medium">JAMstack</span> Developer
