@@ -2,8 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *, body {
   @apply tracking-tight;
+  color: rgb(39 39 42/var(--tw-text-opacity));
+}
+
+.animate-clockwise {
+  animation-iteration-count: infinite;
+  animation-name: move;
+  animation-timing-function: linear
+}
+
+.animate-clockwise,.animate-reverse-clockwise {
+  animation-delay: -9s;
+  animation-duration: 15s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-origin: -2vw -2vh;
+  transition: opacity 1s ease-in-out;
+  will-change: transform
+}
+
+.animate-reverse-clockwise {
+  animation-iteration-count: infinite;
+  animation-name: moveReverse;
+  animation-timing-function: linear;
+}
+
+@keyframes move {
+  to {
+      transform: translateZ(1px) rotate(1turn)
+  }
+}
+
+@keyframes moveReverse {
+  to {
+      transform: translateZ(1px) rotate(-1turn)
+  }
 }
 
 @media screen and (max-width: 992px) {

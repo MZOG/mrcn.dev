@@ -49,9 +49,9 @@ const Navigation = () => {
           {navItems.map(item => (
             <li key={item.id}>
               <Link
-                className={`p-3 block text-lg md:text-base ${
+                className={`px-3 py-1 hover:bg-blue-50/50 rounded-full hover:text-teal-700 select-none ${
                   item?.button
-                    ? "md:bg-teal-500 md:text-white md:rounded-xl md:shadow-xl md:hover:bg-teal-600"
+                    ? "md:bg-teal-500 py-2 md:text-white md:hover:text-white md:rounded-xl md:shadow-xl md:hover:bg-teal-600"
                     : ""
                 }`}
                 to={item.href}
