@@ -1,45 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply text-[17px];
+}
 
 *, body {
-  @apply tracking-tight;
-  color: rgb(39 39 42/var(--tw-text-opacity));
+  @apply text-zinc-800;
 }
 
-.animate-clockwise {
-  animation-iteration-count: infinite;
-  animation-name: move;
-  animation-timing-function: linear
-}
-
-.animate-clockwise,.animate-reverse-clockwise {
-  animation-delay: -9s;
-  animation-duration: 15s;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform-origin: -2vw -2vh;
-  transition: opacity 1s ease-in-out;
-  will-change: transform
-}
-
-.animate-reverse-clockwise {
-  animation-iteration-count: infinite;
-  animation-name: moveReverse;
-  animation-timing-function: linear;
-}
-
-@keyframes move {
-  to {
-      transform: translateZ(1px) rotate(1turn)
-  }
-}
-
-@keyframes moveReverse {
-  to {
-      transform: translateZ(1px) rotate(-1turn)
-  }
+.active {
+  @apply bg-blue-50 text-blue-700;
 }
 
 @media screen and (max-width: 992px) {

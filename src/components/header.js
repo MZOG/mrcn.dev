@@ -5,7 +5,7 @@ import Navigation from "./navigation"
 
 const Header = () => (
   <header className="py-5">
-    <Container customClass="flex justify-between items-center">
+    <Container customClass="flex justify-between items-center py-10">
       <Logo />
       <Navigation />
     </Container>

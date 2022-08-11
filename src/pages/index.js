@@ -9,16 +9,13 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      <Container customClass="flex flex-col md:flex-row md:items-center gap-10 lg:gap-20 lg:my-20">
-        <div className="md:w-8/12 lg:w-9/12">
-          <span className="bg-white rounded-lg px-2 md:px-4 py-1 md:py-2 inline-block shadow-lg">
-            Freelance <span className="font-medium">JAMstack</span> Developer
-          </span>
-          <h1 className="text-4xl lg:text-6xl font-bold mt-5 girloy">
+      <Container customClass="grid gap-4 grid-cols-1 lg:grid-cols-2 items-center pb-12 sm:pb-0 pt-8 sm:min-h-[550px]">
+        <div className="space-y-5 pb-2 sm:pb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-center lg:text-left mx-auto lg:mx-0">
             Speed up your business with blazing fast{" "}
             <span className="text-teal-500">JAMstack</span> website.
           </h1>
-          <h2 className="mt-5 text-2xl text-zinc-700">
+          <h2 className="max-w-md text-lg text-zinc-700 text-center lg:text-left mx-auto lg:mx-0 leading-snug">
             Get up to 10x faster website with Next.js or Gatsby.
           </h2>
           <div className="flex flex-col gap-6 mt-6 md:flex-row">
@@ -36,8 +33,8 @@ const IndexPage = () => {
             </Link>
           </div>
         </div>
-        <div className="md:w-4/12 lg:w-3/12">
-          <div className="flex items-center gap-4 mb-4">
+        <div>
+          {/* <div className="flex items-center gap-4 mb-4">
             <span className="bg-zinc-50 p-2 px-3 rounded-lg text-2xl shadow-lg">
               🚀
             </span>
@@ -68,7 +65,7 @@ const IndexPage = () => {
             <h3 className="lg:text-xl font-medium text-zinc-700">
               More secured
             </h3>
-          </div>
+          </div> */}
         </div>
       </Container>
     </Layout>

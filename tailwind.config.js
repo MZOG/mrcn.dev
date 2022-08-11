@@ -7,14 +7,14 @@ module.exports = {
     container: {
       screens: {
         lg: "1024px",
-        xl: "1180px",
+        xl: "1200px",
       },
     },
     fontFamily: {
-      sans: ["Nunito Sans", "system-ui"],
+      sans: ["Inter", "system-ui"],
     },
     extend: {},
   },
   variants: {},
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 }

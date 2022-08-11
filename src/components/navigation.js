@@ -9,19 +9,14 @@ const Navigation = () => {
 
   const navItems = [
     {
-      id: 1,
-      name: "Home",
-      href: "/",
-    },
-    {
       id: 2,
       name: "Offer",
       href: "/offer",
     },
     {
       id: 3,
-      name: "Works",
-      href: "/works",
+      name: "About",
+      href: "/about",
     },
     {
       id: 4,
@@ -30,72 +25,55 @@ const Navigation = () => {
     },
     {
       id: 5,
-      name: "Get in touch",
-      href: "/contact",
+      name: "Work with me",
+      href: "/work",
       button: true,
     },
   ]
 
   return (
     <>
-      <nav
-        className={`md:block ${
-          isNavOpened
-            ? "absolute left-0 top-0 bg-white w-full pt-20 pb-14"
-            : "hidden"
-        }`}
-      >
-        <ul className="flex flex-col justify-between items-center md:flex-row md:gap-12">
+      <div class="relative">
+        <nav class="hidden items-center md:flex space-x-3 text-sm">
           {navItems.map(item => (
-            <li key={item.id}>
-              <Link
-                className={`px-3 py-1 hover:bg-blue-50/50 rounded-full hover:text-teal-700 select-none ${
-                  item?.button
-                    ? "md:bg-teal-500 py-2 md:text-white md:hover:text-white md:rounded-xl md:shadow-xl md:hover:bg-teal-600"
-                    : ""
-                }`}
-                to={item.href}
-              >
-                {item.name}
-              </Link>
-            </li>
+            <Link
+              key={item.id}
+              to={item.href}
+              activeClassName="active"
+              className={`font-medium px-3 py-1 hover:bg-blue-50/50 rounded-full  select-none ${
+                item.button ? "hover:text-emerald-700" : "hover:text-blue-700"
+              }`}
+            >
+              {item.name}
+            </Link>
           ))}
-        </ul>
-      </nav>
-      <svg
-        onClick={handleNavOpen}
-        className={`md:hidden w-8 h-8 z-10 cursor-pointer ${
-          isNavOpened ? "hidden" : ""
-        }`}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16m-7 6h7"
-        ></path>
-      </svg>
-      <svg
-        onClick={handleNavOpen}
-        className={`md:hidden w-8 h-8 z-10 cursor-pointer ${
-          isNavOpened ? "" : "hidden"
-        }`}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"
-        ></path>
-      </svg>
+        </nav>
+        <div class="block md:hidden">
+          <div class="relative">
+            <button
+              aria-label="Open menu"
+              class="border border-gray-50 rounded-full p-2 shadow text-gray-300 h-10 w-10 bg-white hover:text-gray-600 hover:shadow-lg outline-none focus:outline-none"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
