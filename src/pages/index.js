@@ -9,7 +9,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      <Container customClass="grid gap-4 grid-cols-1 lg:grid-cols-2 items-center pb-12 sm:pb-0 pt-8 sm:min-h-[550px]">
+      <Container customClass="grid gap-4 grid-cols-1 lg:grid-cols-2 items-center pb-12 sm:pb-0 pt-8 ">
         <div className="space-y-5 pb-2 sm:pb-6">
           <h1 className="text-4xl sm:text-5xl font-bold text-center lg:text-left mx-auto lg:mx-0">
             Speed up your business with blazing fast{" "}
@@ -21,13 +21,13 @@ const IndexPage = () => {
           <div className="flex flex-col gap-6 mt-6 md:flex-row">
             <Link
               to="/"
-              className="text-teal-500 self-start hover:bg-teal-500 hover:text-white px-5 py-3 inline-block font-medium rounded-xl border border-teal-500 shadow-lg"
+              className="h-9 px-4 group shadow-lg shadow-blue-500/60 rounded-full bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold text-sm leading-none transition ease-in inline-flex items-center"
             >
               What is JAMstack
             </Link>
             <Link
               to="/"
-              className="bg-teal-500 self-start hover:bg-teal-600 text-white px-5 py-3 inline-block font-medium rounded-xl shadow-lg"
+              className="rounded outline-offset-4 text-sm text-zinc-700 font-semibold inline-flex items-center hover:underline group hover:text-blue-600"
             >
               Get in touch
             </Link>

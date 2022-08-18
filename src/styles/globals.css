@@ -16,14 +16,14 @@ html {
   @apply bg-blue-50 text-blue-700;
 }
 
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   #___gatsby {
     height: 100vh;
     background: url('../images/bg.svg') no-repeat;
     background-position: 0 0;
     background-size: 600px;
   }
-}
+} */
 
 /* #___gatsby {
   height: 100vh;

@@ -26,7 +26,7 @@ const Navigation = () => {
     {
       id: 5,
       name: "Work with me",
-      href: "/work",
+      href: "/work-with-me",
       button: true,
     },
   ]
@@ -40,7 +40,7 @@ const Navigation = () => {
               key={item.id}
               to={item.href}
               activeClassName="active"
-              className={`font-medium px-3 py-1 hover:bg-blue-50/50 rounded-full  select-none ${
+              className={`font-medium px-3 py-1 hover:bg-blue-50/50 rounded-full select-none ${
                 item.button ? "hover:text-emerald-700" : "hover:text-blue-700"
               }`}
             >
