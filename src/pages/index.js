@@ -1,16 +1,18 @@
 import React from "react"
+import { Link } from "gatsby"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
 import Container from "../components/container"
-import { Link } from "gatsby"
+import Hero from "../components/hero/hero"
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Seo title="Home" />
-      <Container customClass="grid gap-4 grid-cols-1 lg:grid-cols-2 items-center pb-12 sm:pb-0 pt-8 ">
-        <div className="space-y-5 pb-2 sm:pb-6">
+      <Seo title="Marcin" />
+      <Hero />
+      <Container customClass="  ">
+        {/* <div className="space-y-5 pb-2 sm:pb-6">
           <h1 className="text-4xl sm:text-5xl font-bold text-center lg:text-left mx-auto lg:mx-0">
             Speed up your business with blazing fast{" "}
             <span className="text-teal-500">JAMstack</span> website.
@@ -32,7 +34,7 @@ const IndexPage = () => {
               Get in touch
             </Link>
           </div>
-        </div>
+        </div> */}
         <div>
           {/* <div className="flex items-center gap-4 mb-4">
             <span className="bg-zinc-50 p-2 px-3 rounded-lg text-2xl shadow-lg">
@@ -68,6 +70,12 @@ const IndexPage = () => {
           </div> */}
         </div>
       </Container>
+
+      <div className="bg-zinc-800 h-[500px]">
+        <Container>
+          <p>elo</p>
+        </Container>
+      </div>
     </Layout>
   )
 }

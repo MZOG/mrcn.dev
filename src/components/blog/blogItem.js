@@ -6,15 +6,15 @@ const BlogItem = ({ item }) => {
 
   return (
     <Link to={href}>
-      <article className="group">
+      <article className="group p-3 hover:bg-gray-100 rounded-xl">
         <img src={image} alt={title} className="rounded-xl" />
-        <p className="text-xs mt-2">
+        <p className="text-xs mt-4">
           <span className="font-semibold">Sierpień</span> / kategoria
         </p>
         <h2 className="mt-2 leading-tight font-medium text-lg group-hover:underline">
           {title}
         </h2>
-        <p className="text-gray-500 text-sm mt-2">{description}</p>
+        <p className="text-gray-500 text-sm mt-2 mb-2">{description}</p>
       </article>
     </Link>
   )

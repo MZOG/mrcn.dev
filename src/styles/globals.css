@@ -1,20 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+@font-face {
+  font-family: "Soehne";
+  src: url("/fonts/soehne-buch.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SoehneBold";
+  src: url("/fonts/soehne-dreiviertelfett.woff2");
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  @apply text-[17px];
+  /* @apply text-[17px]; */
 }
 
 *, body {
-  @apply text-gray-700;
+  font-family: "Soehne";
+  @apply text-zinc-800;
 }
 
 .active {
-  @apply bg-blue-50 text-blue-700;
+  @apply underline;
 }
+
+
+h1, h1 span, h2, h3, h4, h5 {
+  font-family: "SoehneBold";
+}
+
 
 /* @media screen and (max-width: 992px) {
   #___gatsby {

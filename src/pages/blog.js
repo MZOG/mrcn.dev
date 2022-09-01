@@ -8,7 +8,7 @@ import BlogItem from "../components/blog/blogItem"
 const posts = [
   {
     id: 1,
-    title: "JAMstack is good?",
+    title: "What / Who is mrcn.dev",
     description: "A few words about JAMstack",
     href: "/",
     image:
@@ -63,7 +63,7 @@ const Blog = () => {
       <Container>
         <h1 className="text-4xl font-bold text-center mb-14">Blog</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
           {posts.map(post => (
             <BlogItem item={post} />
           ))}

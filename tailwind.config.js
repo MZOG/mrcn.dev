@@ -12,9 +12,10 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Inter", "system-ui"],
+      display: ["DM Serif Display"],
     },
     extend: {},
   },
   variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 }

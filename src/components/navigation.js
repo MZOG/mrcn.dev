@@ -9,44 +9,80 @@ const Navigation = () => {
 
   const navItems = [
     {
-      id: 2,
+      id: 1,
       name: "Offer",
       href: "/offer",
     },
     {
-      id: 3,
+      id: 2,
       name: "About",
       href: "/about",
     },
     {
-      id: 4,
+      id: 3,
       name: "Blog",
       href: "/blog",
-    },
-    {
-      id: 5,
-      name: "Work with me",
-      href: "/work-with-me",
-      button: true,
     },
   ]
 
   return (
     <>
-      <div class="relative">
-        <nav class="hidden items-center md:flex space-x-3 text-sm">
+      <div>
+        <nav class="items-center md:flex text-sm">
           {navItems.map(item => (
             <Link
               key={item.id}
               to={item.href}
               activeClassName="active"
-              className={`font-medium px-3 py-1 hover:bg-blue-50/50 rounded-full select-none ${
-                item.button ? "hover:text-emerald-700" : "hover:text-blue-700"
-              }`}
+              className={`font-medium hover:underline underline-offset-2 ml-10`}
             >
               {item.name}
             </Link>
           ))}
+          <label
+            for="my-modal-5"
+            class="font-bold hover:underline underline-offset-2 ml-10 cursor-pointer"
+          >
+            Work with me
+          </label>
+          <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+          <div class="modal">
+            <div class="modal-box relative w-11/12 max-w-3xl">
+              <label
+                for="my-modal-5"
+                class="btn btn-sm btn-circle absolute right-3 top-3"
+              >
+                ✕
+              </label>
+
+              <h2 class="font-bold text-3xl mb-8 text-center">
+                Get in touch 👋🏼
+              </h2>
+
+              <div className="flex justify-between">
+                <div className="w-6/12">
+                  <p>E-mail:</p>
+                  <p className="">hi@mrcn.dev</p>
+                </div>
+                <div className="w-6/12 flex flex-col">
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Type here"
+                      class="input input-bordered w-full max-w-xs"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <p>lel</p>
+              {/* <div class="modal-action">
+                <label for="my-modal-5" class="btn">
+                  Yay!
+                </label>
+              </div> */}
+            </div>
+          </div>
         </nav>
         <div class="block md:hidden">
           <div class="relative">
