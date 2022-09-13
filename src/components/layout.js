@@ -4,9 +4,9 @@ import Footer from "./footer"
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
-      <main className="mt-20">{children}</main>
+      <main className="md:mt-20">{children}</main>
       <Footer />
     </div>
   )

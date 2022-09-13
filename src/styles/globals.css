@@ -22,16 +22,23 @@ html {
 
 *, body {
   font-family: "Soehne";
-  @apply text-zinc-800;
 }
 
 .active {
   @apply underline;
 }
 
+.hero h1 {
+  font-family: "SoehneBold";
+}
+
 
 h1, h1 span, h2, h3, h4, h5 {
-  font-family: "SoehneBold";
+  font-family: "Soehne";
+}
+
+p {
+  @apply text-lg;
 }
 
 

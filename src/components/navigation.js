@@ -1,8 +1,13 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
+import { useEffect } from "react"
 
 const Navigation = () => {
   const [isNavOpened, setIsNavOpened] = useState(false)
+  const [windowWidth, setWindowWidth] = useState({
+    width: undefined,
+  })
+
   const handleNavOpen = () => {
     setIsNavOpened(!isNavOpened)
   }
@@ -23,93 +28,63 @@ const Navigation = () => {
       name: "Blog",
       href: "/blog",
     },
+    {
+      id: 4,
+      name: "Contact",
+      href: "/contact",
+    },
   ]
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth({
+        width: window.innerWidth,
+      })
+      console.log(windowWidth)
+    }
+    window.addEventListener("resize", handleResize)
+    handleResize()
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   return (
     <>
-      <div>
-        <nav class="items-center md:flex text-sm">
+      <Link to="/">Marcin Zogrodnik</Link>
+
+      <nav
+        className={`${
+          isNavOpened
+            ? "translate-none opacity-100 left-0"
+            : "translate-x-full opacity-0"
+        } absolute top-14 bg-white w-full transition duration-300 md:relative md:translate-x-0 md:opacity-100 md:top-0 md:left-0`}
+      >
+        <ul>
           {navItems.map(item => (
-            <Link
-              key={item.id}
-              to={item.href}
-              activeClassName="active"
-              className={`font-medium hover:underline underline-offset-2 ml-10`}
-            >
-              {item.name}
-            </Link>
+            <li key={item.id} className="border-b ">
+              <Link to={item.href} className="p-5 block text-sm">
+                {item.name}
+              </Link>
+            </li>
           ))}
-          <label
-            for="my-modal-5"
-            class="font-bold hover:underline underline-offset-2 ml-10 cursor-pointer"
-          >
-            Work with me
-          </label>
-          <input type="checkbox" id="my-modal-5" class="modal-toggle" />
-          <div class="modal">
-            <div class="modal-box relative w-11/12 max-w-3xl">
-              <label
-                for="my-modal-5"
-                class="btn btn-sm btn-circle absolute right-3 top-3"
-              >
-                ✕
-              </label>
+        </ul>
+      </nav>
 
-              <h2 class="font-bold text-3xl mb-8 text-center">
-                Get in touch 👋🏼
-              </h2>
-
-              <div className="flex justify-between">
-                <div className="w-6/12">
-                  <p>E-mail:</p>
-                  <p className="">hi@mrcn.dev</p>
-                </div>
-                <div className="w-6/12 flex flex-col">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      class="input input-bordered w-full max-w-xs"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <p>lel</p>
-              {/* <div class="modal-action">
-                <label for="my-modal-5" class="btn">
-                  Yay!
-                </label>
-              </div> */}
-            </div>
-          </div>
-        </nav>
-        <div class="block md:hidden">
-          <div class="relative">
-            <button
-              aria-label="Open menu"
-              class="border border-gray-50 rounded-full p-2 shadow text-gray-300 h-10 w-10 bg-white hover:text-gray-600 hover:shadow-lg outline-none focus:outline-none"
-              aria-expanded="false"
-              aria-haspopup="dialog"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
+      <button onClick={handleNavOpen}>
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
     </>
   )
 }
