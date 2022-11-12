@@ -5,57 +5,89 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
   return (
-    <Container customClass="flex flex-col-reverse md:flex-row items-center hero">
-      <div className="md:w-6/12">
-        <h1 className="text-4xl leading-tight lg:text-5xl mt-5">
-          Helping businesses make blazing fast JAMstack websites.
+    <div className="section_hero">
+      <Container customClass="pt-20 relative">
+        <Link
+          to="/contact"
+          className="available text-sm bg-white inline-block px-3 py-1 rounded-full border-mz/60 border text-mz hover:bg-mz hover:text-white"
+        >
+          Available for projects
+        </Link>
+        <h1 className="text-7xl font-bold font-serif max-w-4xl pt-8">
+          Blazing fast <span className="text-mz">JAMstack</span> websites for
+          your <span className="text-mz">Business</span>
         </h1>
 
-        <div className="flex flex-col gap-5 mt-8">
-          <Link
-            to="/offer/jamstack"
-            className=" bg-black self-start text-gray-100 px-7 py-4 rounded-full text-xl outline-none hover:outline-black outline-2"
-          >
-            What is JAMstack?
-          </Link>
-          <Link
-            to="/offer/wordpress"
-            className="outline-none self-start hover:outline-black outline-2  outline-offset-2 hover:border-indigo-600 bg-gray-100 px-7 py-4 rounded-full text-lg focus-ring"
-          >
-            Get in touch
-          </Link>
-        </div>
+        <h2 className="text-2xl pt-10">
+          Let's <span className="text-mz">work together</span> and make your{" "}
+          <span className="text-mz">website</span> better.
+        </h2>
 
-        <div className="flex gap-4 items-center mt-10 group cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 5L12 19"></path>
-            <path d="M19 12L12 19 5 12"></path>
-          </svg>
+        <Link
+          to="/contact"
+          className="mt-12 inline-block bg-mz px-5 py-2 text-white rounded-full hover:bg-teal-500"
+        >
+          Let's talk
+        </Link>
 
-          <p className="hover:underline hover:underline-offset-4">
-            Learn more about me
-          </p>
+        <div className="flex items-center  gap-20 mt-12">
+          <StaticImage
+            src="../../images/react.png"
+            placeholder="blurred"
+            alt="React Development"
+            width={80}
+            height={80}
+          />
+          <StaticImage
+            src="../../images/js.png"
+            placeholder="blurred"
+            alt="JavaScript Development"
+            width={80}
+            height={80}
+          />
+          <StaticImage
+            src="../../images/wp.png"
+            placeholder="blurred"
+            alt="WordPress Development"
+            width={80}
+            height={80}
+          />
+          <div className="flex gap-3 items-center">
+            <p className="font-bold text-7xl text-mz">10+</p>
+            <p className="font-medium text-lg">
+              years on<span className="block"> the market</span>
+            </p>
+          </div>
+
+          {/* <div className="opacity-70 hover:opacity-100 max-w-md -right-[120px] -bottom-[130px] bg-white p-5 border border-zinc-100 rounded-xl">
+            <p className="text-sm">
+              Working with Marcin was <span className="text-mz">excellent</span>
+              ! He answered all my questions and posted each element of the
+              website very quickly. He was{" "}
+              <span className="text-mz">explaining</span> to me patiently, what
+              website building looks like and what should I focus on as an
+              entrepreneur. He{" "}
+              <span className="text-mz">met my expectations</span> 100 percent,
+              that’s why I <span className="text-mz">recommend</span> him
+              because he is professional and you wouldn’t regret working with
+              him.
+            </p>
+
+            <p className="text-sm mt-4 font-medium">
+              Karolina Jabłońska - Doradca Językowy
+            </p>
+
+            <a
+              href="https://doradcajezykowy.com"
+              target="_blank"
+              className="text-sm mt-4 hover:text-mz"
+            >
+              www.doradcajezykowy.com
+            </a>
+          </div> */}
         </div>
-      </div>
-      <div className="md:w-6/12">
-        <StaticImage
-          src="../../images/hero-image.png"
-          alt="JAMstack for Business"
-          placeholder="blurred"
-          quality={100}
-        />
-      </div>
-    </Container>
+      </Container>
+    </div>
   )
 }
 
