@@ -1,13 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { SEO } from "../components/seo"
 
 import Container from "../components/container"
 
 const About = () => {
   return (
     <Layout>
-      <SEO title="About me" />
       <Container>
         <p className="text-center">work in progress</p>
       </Container>
@@ -16,3 +15,5 @@ const About = () => {
 }
 
 export default About
+
+export const Head = () => <SEO title="Start" />

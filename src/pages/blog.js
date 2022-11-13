@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { SEO } from "../components/seo"
 
 import Container from "../components/container"
 import BlogItem from "../components/blog/blogItem"
@@ -59,7 +59,6 @@ const posts = [
 const Blog = () => {
   return (
     <Layout>
-      <SEO title="Blog" />
       <Container>
         <h1 className="text-4xl font-bold text-center mb-14">Blog</h1>
 
@@ -74,3 +73,5 @@ const Blog = () => {
 }
 
 export default Blog
+
+export const Head = () => <SEO title="Blog" />

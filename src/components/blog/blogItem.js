@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 const BlogItem = ({ item }) => {
-  const { title, description, href, image } = item
+  const { title, description, href } = item
 
   return (
     <Link to={href}>
