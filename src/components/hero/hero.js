@@ -7,12 +7,44 @@ const Hero = () => {
   return (
     <div className="section_hero">
       <Container customClass="pt-20 relative">
-        <Link
+        {/* <Link
           to="/contact"
           className="available text-sm bg-white inline-block px-3 py-1 rounded-full border-mz/60 border text-mz hover:bg-mz hover:text-white"
         >
           Available for projects
-        </Link>
+        </Link> */}
+
+        <label
+          htmlFor="my-modal-4"
+          className="available cursor-pointer text-sm bg-white inline-block px-3 py-1 rounded-full border-mz/60 border text-mz hover:bg-mz hover:text-white"
+        >
+          Available for projects
+        </label>
+
+        <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+        <label htmlFor="my-modal-4" className="modal cursor-pointer">
+          <label className="modal-box relative" htmlFor="">
+            <h3 className="text-lg font-bold">Let's work together!</h3>
+            <p className="py-2">
+              I am available for new project. Leave your email and I'll contact
+              you shortly.
+            </p>
+
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">What is your name?</span>
+              </label>
+              <input
+                type="email"
+                placeholder="your@email.com"
+                className="input input-bordered w-full max-w-xs"
+              />
+            </div>
+
+            <button className="btn btn-sm mt-4">Button</button>
+          </label>
+        </label>
+
         <h1 className="text-7xl font-bold font-serif max-w-4xl pt-8">
           Blazing fast <span className="text-mz">JAMstack</span> websites for
           your <span className="text-mz">Business</span>
