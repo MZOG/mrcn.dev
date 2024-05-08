@@ -35,7 +35,7 @@ export default function Home() {
 
       <h2 className="py-5 font-mono">projects</h2>
 
-      <ul className="space-y-4 pt-2">
+      <ul className="space-y-4 pt-3">
         {projects.map((project, index) => {
           return (
             <li key={index}>
